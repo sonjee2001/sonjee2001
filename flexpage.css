@@ -1,0 +1,499 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Montserrat;
+}
+
+body{
+  background-color: #2e3435;
+
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 120px;
+    background-color: rgb(10, 71, 121);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    background: #222;
+    box-shadow: 0px 1px 2px rgba(0,255,255,0.5), 
+                0px 2px 4px rgba(0,255,255,0.5), 
+                0px 4px 8px rgba(0,255,255,0.5), 
+                0px 8px 16px rgba(0,255,255,0.5);
+}
+
+.icon{
+  position: absolute;
+  background: transparent; 
+}
+
+.backvideo{
+  position: fixed;
+  min-height: 100vh;
+  width: 100%;
+  z-index: -5;
+}
+
+.logo{
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+nav a{
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s;
+}
+
+nav a:hover,
+nav a.active{
+    color: #0ef;
+}
+.sign-out{
+  height: 50px;
+  width: 50px;
+  
+}
+h2{
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 50px;
+    color: black;
+}
+
+
+/* Glowing LOgo */
+
+:root {
+    --glow-color: hsl(186 100% 69%);
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  
+  .logo {
+    position: relative;
+    color: var(--glow-color);
+    cursor: pointer;
+    padding: 0.35em 1em;
+    border: 0.15em solid var(--glow-color);
+    border-radius: 0.45em;
+    background: none;
+    perspective: 2em;
+    letter-spacing: 5px;
+  
+    -webkit-box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+      0px 0px 0.5em 0px var(--glow-color);
+    -moz-box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+      0px 0px 0.5em 0px var(--glow-color);
+    box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+      0px 0px 0.5em 0px var(--glow-color);
+    animation: border-flicker 2s linear infinite;
+  }
+  
+  .logo::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0.7;
+    filter: blur(1em);
+    transform: translateY(120%) rotateX(95deg) scale(1, 0.35);
+    background: var(--glow-color);
+    pointer-events: none;
+  }
+  
+  .logo::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    z-index: -1;
+    background-color: var(--glow-color);
+    box-shadow: 0 0 2em 0.2em var(--glow-color);
+    transition: opacity 100ms linear;
+  }
+  
+  .logo:hover {
+    color: rgba(0, 0, 0, 0.8);
+    text-shadow: none;
+    animation: none;
+  }
+  
+  .logo:hover .glowing-txt {
+    animation: none;
+  }
+  
+  .logo:hover .faulty-letter {
+    animation: none;
+    text-shadow: none;
+    opacity: 1;
+  }
+  
+  .logo:hover:before {
+    filter: blur(1.5em);
+    opacity: 1;
+  }
+  
+  .logo:hover:after {
+    opacity: 1;
+  }
+  
+  @keyframes faulty-flicker {
+    0% {
+      opacity: 0.1;
+    }
+    2% {
+      opacity: 0.1;
+    }
+    4% {
+      opacity: 0.5;
+    }
+    19% {
+      opacity: 0.5;
+    }
+    21% {
+      opacity: 0.1;
+    }
+    23% {
+      opacity: 1;
+    }
+    80% {
+      opacity: 0.5;
+    }
+    83% {
+      opacity: 0.4;
+    }
+  
+    87% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes text-flicker {
+    0% {
+      opacity: 0.1;
+    }
+  
+    2% {
+      opacity: 1;
+    }
+  
+    8% {
+      opacity: 0.1;
+    }
+  
+    9% {
+      opacity: 1;
+    }
+  
+    12% {
+      opacity: 0.1;
+    }
+    20% {
+      opacity: 1;
+    }
+    25% {
+      opacity: 0.3;
+    }
+    30% {
+      opacity: 1;
+    }
+  
+    70% {
+      opacity: 0.7;
+    }
+    72% {
+      opacity: 0.2;
+    }
+  
+    77% {
+      opacity: 0.9;
+    }
+    100% {
+      opacity: 0.9;
+    }
+  }
+  
+  @keyframes border-flicker {
+    0% {
+      opacity: 0.1;
+    }
+    2% {
+      opacity: 1;
+    }
+    4% {
+      opacity: 0.1;
+    }
+  
+    8% {
+      opacity: 1;
+    }
+    70% {
+      opacity: 0.7;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .video{
+    min-height: 100vh;
+    width: 100%;
+    background-size: cover;
+    position: absolute;
+    z-index: -10;
+  }
+
+  .container{
+    background: transparent;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2%;
+   
+    
+  }
+
+  .box{
+    width: 400px;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 6%; 
+    border-radius: 15px;
+    box-shadow: 0px 1px 2px rgba(179, 255, 0, 0.821), 
+                0px 2px 4px rgba(179, 255, 0, 0.821), 
+                0px 4px 8px rgba(0,255,255,0.5),
+                0px 8px 16px rgba(179, 255, 0, 0.821);
+    
+   
+  }
+
+  .photo{
+    height: 600px;
+    width: fit-content;
+    margin-bottom: 5%;
+    position: relative;
+    border: 2px solid white;
+    margin-top: 11%;
+    border-radius: 50% 0%;
+    padding-top: -90%;
+    transition: 0.9s;
+    margin-left: 5%;
+    box-shadow: 0px 1px 2px rgba(255, 0, 238, 0.97), 
+                0px 2px 4px rgba(255, 0, 200, 0.908), 
+                0px 4px 8px rgba(0,255,255,0.5), 
+                0px 8px 16px rgba(0,255,255,0.5);
+    filter: drop-shadow(16px 7px 8px red);
+    
+  }
+
+  .photo:hover{
+    filter: brightness(90%);
+    filter: saturate(180%);
+    transform: translateX(20px);
+    border-radius: 50% 20% / 10% 40%;
+    box-shadow: 0px 1px 2px rgba(255, 0, 238, 0.97), 
+                0px 2px 4px rgba(255, 0, 200, 0.908), 
+                0px 4px 8px rgba(0,255,255,0.5), 
+                0px 8px 16px rgba(0,255,255,0.5),
+                0px 10px 30px rgba(0,255,255,0.5),
+                0px 12px 60px rgba(0,255,255,0.5);
+background: linear-gradient(60deg, #f79533, #f37055,
+              #ef4e7b, #a166ab, #5073b8, 
+              #1098ad, #07b39b, #6fba82);
+    z-index: 1;
+  }
+
+  .box-image{
+    display: block;
+  width: 100%;
+  height: auto;
+  background-size: cover;
+  overflow: hidden;
+  border-radius: 10px;
+  transition: 0.7s;
+
+  }
+
+  .box-image:hover{
+    transform: scale(1.5);
+    box-shadow: 0px 1px 2px rgba(199, 0, 186, 0.97), 
+                0px 2px 4px rgba(255, 0, 200, 0.908), 
+                0px 4px 8px rgba(255, 0, 200, 0.908),
+                0px 8px 16px rgba(255, 0, 200, 0.908),
+                0px 10px 30px rgba(255, 0, 200, 0.908),  
+                0px 12px 40px rgba(255, 0, 200, 0.908),
+                0px 14px 60px rgba(0,255,255,0.5);
+                
+  }
+  h1{
+    text-shadow: 2px 4px 8px #222;
+    letter-spacing: 1px;
+  }
+
+  .content{
+
+    content-visibility: hidden;
+     background: transparent;
+     text-align: center;
+     color: #fff;
+     transition: 0.9s;
+     text-align: justify;
+     bottom: 0;
+     text-shadow: 2px 4px 8px #222;
+  }
+
+  
+  .box:hover .content{
+    content-visibility: visible;
+    position: absolute;
+    margin-bottom: 8%;
+    height: fit-content;
+    width: 355px;
+    font-size: 12px;
+    padding: 1%;
+    text-align: justify;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur (20px);
+    box-shadow: 0px 1px 2px rgba(255, 0, 238, 0.97), 
+                0px 2px 4px rgba(255, 0, 200, 0.908), 
+                0px 4px 8px rgba(248, 209, 55, 0.838), 
+                0px 8px 16px rgba(248, 209, 55, 0.838),
+                0px 10px 30px rgba(248, 209, 55, 0.838),
+                0px 12px 60px rgba(248, 209, 55, 0.838);
+    backdrop-filter: blur(20px);
+    background: transparent;
+   
+    
+  }
+
+  .text{
+    font-size: 80px;
+    color: #fff;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    margin-right: 55%;
+    margin-top: 5%;
+    font-family: UnifrakturMaguntia ;
+    font-style: italic;
+    text-align: center;
+    z-index: 1;
+    color: #fff;
+    text-shadow: 0px 2px 5px #3793f5,
+                  0px 5px black;
+    content-visibility: visible;
+    
+
+  }
+
+  .photo:hover .text{
+    content-visibility: hidden;
+    position: absolute;
+  }
+ 
+  div.footer{
+    background: black;
+    width: 100%;
+    align-items: bottom;
+    border-top: 2px solid #ada7a7;
+    border-radius: 2px;
+    background-color: #2e3435;
+    box-shadow: 0 0 2em 0.2em var(--glow-color);
+}
+ h6{
+  position: absolute;
+  margin-top: 5px;
+    font-family: montserrat;
+    font-weight: 400;
+    color: #fff;
+    font-size: 15px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-left: 2%;
+}
+
+
+
+footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 4%;
+}
+
+  li{
+    list-style: none;
+    margin: 8px;
+  }
+
+  ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10%;
+    
+  }
+ img {
+  list-style: none;
+  height: fit-content;
+  width: 50px;
+  box-shadow: 1px 1px 2px rgba(0,255,255,0.5), 
+                1px 2px 4px rgba(0,255,255,0.5);
+  border-radius: 10px;
+}
+img:hover{
+  box-shadow: 1px 1px 2px rgba(0,255,255,0.5), 
+                1px 2px 4px rgba(0,255,255,0.5), 
+                1px 4px 8px rgba(0,255,255,0.5), 
+                1px 8px 16px rgba(0,255,255,0.5);
+}
+
+li span{
+  background-color: #1098ad;
+  border:none;
+  position: relative;
+  margin-bottom: 5px;
+
+}
+
+ul span{
+  color: #fff;
+  font-size: 12px;
+}
+
+.w3s{
+  height: 50px;
+  width: 50px;
+}
+
